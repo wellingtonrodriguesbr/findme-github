@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import React, { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiChevronRight } from 'react-icons/fi';
 import { api } from "../../services/api";
@@ -25,6 +25,7 @@ export const Dashboard: React.FC = () => {
   });
   const [newRepo, setNewRepo] = useState('');
   const [inputError, setInputError] = useState('');
+  const formEl = useRef<HTMLFormElement | null>(null);
 
   useEffect(() => {
     localStorage.setItem('@findmeGithub:repositories', JSON.stringify(repos));
@@ -41,11 +42,18 @@ export const Dashboard: React.FC = () => {
       return;
     }
 
-    const response = await api.get<GithubRepository>(`repos/${newRepo}`);
-    const repository = response.data;
+    try {
+      const response = await api.get<GithubRepository>(`repos/${newRepo}`);
+      const repository = response.data;
 
-    setRepos([...repos, repository]);
-    setNewRepo('');
+      setRepos([...repos, repository]);
+      formEl.current?.reset();
+      setNewRepo('');
+      setInputError('');
+    } catch {
+      setInputError('Repositório não encontrado');
+    }
+
   }
 
   return (
@@ -53,7 +61,7 @@ export const Dashboard: React.FC = () => {
     <img src={logo} alt="Logo do Find me Github" />
       <Title>Encontre repositórios no Github.</Title>
 
-      <Form hasError={Boolean(inputError)} onSubmit={handleAddRepo}>
+      <Form ref={formEl} hasError={Boolean(inputError)} onSubmit={handleAddRepo}>
         <input 
           type="text"
           placeholder="Informe o username/repositório"

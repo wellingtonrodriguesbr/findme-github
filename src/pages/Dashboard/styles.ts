@@ -111,7 +111,7 @@ export const Repos = styled.section `
     box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.1);
     svg {
       color: #3D3D4D;
-      transform: translate3d(-40px, 0, 0);
+      transform: translate3d(16px, 0, 0);
     }
   }
 }
