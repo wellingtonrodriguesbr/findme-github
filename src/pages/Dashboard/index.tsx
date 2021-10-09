@@ -1,4 +1,5 @@
 import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { FiChevronRight } from 'react-icons/fi';
 import { api } from "../../services/api";
 import logo from '../../assets/Logo.svg';
@@ -55,7 +56,7 @@ export const Dashboard: React.FC = () => {
       <Form hasError={Boolean(inputError)} onSubmit={handleAddRepo}>
         <input 
           type="text"
-          placeholder="username/repository_name"
+          placeholder="Informe o username/repositório"
           onChange={handleInputChange} 
         />
         <button type="submit">Pesquisar</button>
@@ -65,14 +66,14 @@ export const Dashboard: React.FC = () => {
       <Repos>
 
         {repos.map(repository => (
-          <a href="/repositories" key={repository.full_name}>
+          <Link to={`/repositories/${repository.full_name}`} key={repository.full_name}>
             <img src={repository.owner.avatar_url} alt={repository.owner.login} />
             <div>
               <strong>{repository.full_name}</strong>
               <p>{repository.description ?? 'Nenhuma descrição disponível'}</p>
             </div>
             <FiChevronRight size={20} />
-          </a>
+          </Link>
         ))}
       </Repos>
     </>
