@@ -23,8 +23,8 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #f2f2fa;
     background-image: url(${imgBackGround});
     background-repeat: no-repeat;
-    background-size: 30%;
-    background-position: top;
+    background-size: 50%;
+    background-position: top right;
     -webkit-font-smoothing: antialiased;
   }
 

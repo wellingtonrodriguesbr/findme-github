@@ -10,6 +10,10 @@ export const Title = styled.h1 `
   font-size: 48px;
   margin-top: 100px;
   color: #3A3A3A;
+
+  @media (max-width: 700px) {
+    font-size: 24px;
+  }
 `;
 
 export const Form = styled.form<FormProps> `
@@ -40,6 +44,13 @@ export const Form = styled.form<FormProps> `
       &:focus {
         outline: 0;
       }
+
+      @media (max-width: 700px) {
+        padding: 4px 8px;
+        height: 50px;
+        font-size: 12px;
+        flex: 1;
+      }
     }
 
     button { 
@@ -56,6 +67,16 @@ export const Form = styled.form<FormProps> `
       &:hover {
         background-color: #04D351;
       }
+
+      @media (max-width: 700px) {
+        width: 80px;
+        height: 50px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      padding: 0 2%;
     }
 `;
 
@@ -83,6 +104,11 @@ export const Repos = styled.section `
     width: 64px;
     height: 64px;
     border-radius: 50%;
+
+    @media (max-width: 700px) {
+        width: 32px;
+        height: 32px;
+      }
   }
 
     div {
@@ -92,12 +118,20 @@ export const Repos = styled.section `
       strong {
       color: #3D3D4D;
       font-size: 18px;
+
+        @media (max-width: 700px) {
+          font-size: 14px;
+        }
       }
 
     p {
       color: #A8A8B3;
       font-size: 14px;
       margin-top: 4px;
+
+      @media (max-width: 700px) {
+        font-size: 10px;
+      }
     }
   }
 
@@ -109,9 +143,14 @@ export const Repos = styled.section `
   &:hover {
     transform: translate3d(20px, 0, 0);
     box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.1);
+
     svg {
       color: #3D3D4D;
       transform: translate3d(16px, 0, 0);
+    }
+
+    @media (max-width: 700px) {
+      transform: translate3d(0, 0, 0);
     }
   }
 }

@@ -5,6 +5,12 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
 
+  img {
+    @media (max-width: 700px) {
+      width: 50%;
+    }
+  }
+
   a {
       display: flex;
       align-items: center;
@@ -39,6 +45,11 @@ export const RepoInfo = styled.section`
       width: 120px;
       height: 120px;
       border-radius: 50%;
+
+      @media (max-width: 700px) {
+        width: 60px;
+        height: 60px;
+      }
     }
 
     div {
@@ -47,12 +58,21 @@ export const RepoInfo = styled.section`
       strong {
         font-size: 36px;
         color: #3D3D4D;
+
+        @media (max-width: 700px) {
+          font-size: 24px;
+        }
       }
 
-      p{
+      p {
         font-size: 18px;
         color: #737380;
         margin-top: 12px;
+
+          @media (max-width: 700px) {
+            font-size: 12px;
+            margin-top: 0;
+          }
       }
     }
   }
@@ -66,18 +86,34 @@ export const RepoInfo = styled.section`
 
       & + li {
         margin-left: 80px;
+
+        @media (max-width: 700px) {
+          margin-left: 36px;
+        }
       }
 
       strong {
         display: block;
         font-size: 36px;
         color: #3D3D4D;
+
+        @media (max-width: 700px) {
+          font-size: 20px;
+        }
       }
     }
 
     span {
       font-size: 20px;
-      color: #737380
+      color: #737380;
+
+      @media (max-width: 700px) {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      overflow-x: scroll;
     }
   }
 
@@ -117,12 +153,20 @@ export const Issues = styled.section`
       strong {
       color: #3D3D4D;
       font-size: 18px;
+
+        @media (max-width: 700px) {
+          font-size: 14px;
+        }
       }
 
     p {
       color: #A8A8B3;
       font-size: 14px;
       margin-top: 4px;
+
+      @media (max-width: 700px) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -134,9 +178,14 @@ export const Issues = styled.section`
   &:hover {
     transform: translate3d(20px, 0, 0);
     box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.1);
+
     svg {
       color: #3D3D4D;
       transform: translate3d(16px, 0, 0);
+    }
+
+    @media (max-width: 700px) {
+      transform: translate3d(0, 0, 0);
     }
   }
 }
