@@ -8,7 +8,7 @@ const Repo = lazy(() => import('../pages/Repo'));
 
 export const Routes: React.FC = () => {
   return (
-    <Suspense fallback={'Carregando'}>
+    <Suspense fallback={'Carregando...'}>
       <Switch>
         <Route component={Dashboard} path="/" exact/>
         <Route component={Repo} path="/repositories/:repository+" />
