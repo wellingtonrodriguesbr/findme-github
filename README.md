@@ -19,10 +19,27 @@
 ---
 
 # Tecnologias
-
-- [TYPESCRIPT](https://www.typescriptlang.org/)
 - [REACT](https://pt-br.reactjs.org/)
+- [TYPESCRIPT](https://www.typescriptlang.org/)
 
+---
+<br/>
+
+## Como baixar o projeto:
+
+```bash
+# Clonar o repositório
+$ git clone https://github.com/wellingtonrodriguesbr/findme-github.git
+
+# Entrar no diretório
+$ cd findme-github
+
+# Instalar as dependências
+$ yarn install
+
+# Rodar o projeto
+$ yarn start
+```
 ---
 
 <p align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/tonrodrigues/">Wellington Rodrigues</a> ✌🏼</p>
