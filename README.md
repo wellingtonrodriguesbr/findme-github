@@ -43,4 +43,4 @@ $ yarn start
 ```
 ---
 
-<p align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/wellingtonrodsriguesbr/">Wellington Rodrigues</a> ✌🏼</p>
+<p align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/wellingtonrodriguesbr/">Wellington Rodrigues</a> ✌🏼</p>
