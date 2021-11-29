@@ -19,8 +19,9 @@
 ---
 
 # Tecnologias
-- [REACT](https://pt-br.reactjs.org/)
-- [TYPESCRIPT](https://www.typescriptlang.org/)
+- [React](https://pt-br.reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled-Components](https://styled-components.com/)
 
 ---
 <br/>
@@ -42,4 +43,4 @@ $ yarn start
 ```
 ---
 
-<p align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/tonrodrigues/">Wellington Rodrigues</a> ✌🏼</p>
+<p align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/wellingtonrodsriguesbr/">Wellington Rodrigues</a> ✌🏼</p>
